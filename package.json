@@ -20,7 +20,7 @@
   "scripts": {
     "prepack": "yarn run prepack:rn:tsc && yarn run prepack:rn:libs",
     "prepack:rn:tsc": "tsc -p tsconfig.json",
-    "prepack:rn:libs": "cp -a libs dist"
+    "prepack:rn:libs": "cp -a src/libs dist"
   },
   "dependencies": {
     "base-64": "^0.1.0",

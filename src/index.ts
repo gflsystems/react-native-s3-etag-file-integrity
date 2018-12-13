@@ -1,6 +1,6 @@
 import {Buffer} from 'buffer';
 import * as base64 from 'base-64';
-import crypto from '../libs/crypto';
+import crypto from './libs/crypto';
 import RNFS from 'react-native-fs';
 
 interface File {
