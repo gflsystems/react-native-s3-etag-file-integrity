@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "moduleResolution": "node",
+    "lib": ["dom", "es7"],
+    "target": "es5",
+    "removeComments": true,
+    // "noImplicitAny": true,
+    "alwaysStrict": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "outDir": "dist",
+  },
+  "include": [
+    "src/**/*"
+  ],
+   "exclude": [
+     "node_modules",
+     "./libs/**/*"
+   ]
+}

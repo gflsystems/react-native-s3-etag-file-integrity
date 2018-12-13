@@ -1,0 +1,30 @@
+{
+  "name": "react-native-s3-etag-file-integrity",
+  "version": "1.0.0",
+  "description": "a Amazon S3 ETAG calculator to check file integrity for react-native",
+  "main": "dist/index.js",
+  "author": "Joseph Briggs <jbriggsr3@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "homepage": "https://github.com/rip3rs/react-native-s3-etag-file-integrity",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rip3rs/react-native-s3-etag-file-integrity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rip3rs/react-native-s3-etag-file-integrity/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "yarn run prepack:rn:tsc && yarn run prepack:rn:libs",
+    "prepack:rn:tsc": "tsc -p tsconfig.json",
+    "prepack:rn:libs": "cp -a libs dist"
+  },
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "buffer": "^5.2.1",
+    "react-native-fs": "^2.12.1"
+  }
+}
