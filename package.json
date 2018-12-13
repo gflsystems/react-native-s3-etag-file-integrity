@@ -1,6 +1,6 @@
 {
   "name": "react-native-s3-etag-file-integrity",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a Amazon S3 ETAG calculator to check file integrity for react-native",
   "main": "dist/index.js",
   "author": "Joseph Briggs <jbriggsr3@gmail.com>",
