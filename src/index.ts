@@ -11,18 +11,20 @@ interface File {
   size: number
 };
 
-const rootPath = RNFS.DocumentDirectoryPath; // Android
-const md5sOfEachPart: Array < string > = [];
-const file: File = {
-  path: '',
-  etag: '',
-  chunks: 0,
-  chunkSize: 0,
-  size: null
-}
-let currentBytesRead: number = 0;
+
 
 export const s3eTag = (filePath: string, etag: string, fileSize: number) => {
+  const rootPath = RNFS.DocumentDirectoryPath; // Android
+  const md5sOfEachPart: Array < string > = [];
+  const file: File = {
+    path: '',
+    etag: '',
+    chunks: 0,
+    chunkSize: 0,
+    size: null
+  }
+  let currentBytesRead: number = 0;
+  
   if (!filePath || !etag || !fileSize) throw new Error('You need to pass the file path && ETAG && the file size');
 
   file.path = filePath;
