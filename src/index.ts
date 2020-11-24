@@ -14,7 +14,6 @@ interface File {
 
 
 export const s3eTag = (filePath: string, etag: string, fileSize: number) => {
-  const rootPath = RNFS.DocumentDirectoryPath; // Android
   const md5sOfEachPart: Array < string > = [];
   const file: File = {
     path: '',
@@ -41,7 +40,7 @@ export const s3eTag = (filePath: string, etag: string, fileSize: number) => {
       let buffer: Buffer;
       let bytesRead: number;
 
-      RNFS.read(`${rootPath}/${file.path}`, file.chunkSize, currentBytesRead, 'base64')
+      RNFS.read(`${file.path}`, file.chunkSize, currentBytesRead, 'base64')
         .then(res => {
           bytesRead = base64.decode(res).length;
 
